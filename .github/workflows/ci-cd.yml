@@ -28,5 +28,5 @@ jobs:
       if: success()
       run: |
         npm run build
-          echo "$env:SSH_PRIVATE_KEY" | Out-File -FilePath $env:USERPROFILE\.ssh\id_rsa -Encoding utf8
+    
           
