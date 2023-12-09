@@ -4,7 +4,7 @@ const { authService } = require('./generarClave');
 
 describe('Pruebas para authService', function () {
   // Antes de todas las pruebas, inicia el servidor
- const PORT = 3000;
+ const PORT = 3001;
 
 before(function (done) {
   this.server = authService.listen(PORT, () => {
