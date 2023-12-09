@@ -14,11 +14,13 @@ before(function (done) {
 });
 
   // Después de todas las pruebas, cierra el servidor
-  after(function () {
-    this.server.close(() => {
-      console.log('Servidor de prueba cerrado');
-    });
+  after(function (done) {
+  this.server.close(() => {
+    console.log('Servidor de prueba cerrado');
+    done();
   });
+});
+
 
   it('Debería generar un token y clave única', function () {
     return axios.post('http://localhost:3000/generar-token', {
