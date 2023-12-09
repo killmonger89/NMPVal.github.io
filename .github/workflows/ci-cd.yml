@@ -30,6 +30,6 @@ jobs:
     - name: Deploy to production
       if: success()
       run: |
-        npm run build
+        node app.js
     
           
