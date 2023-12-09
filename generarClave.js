@@ -86,7 +86,7 @@ const server = authService.listen(PORT, () => {
 });
 
 // Configurando un temporizador para cerrar el servidor después de 10 minutos (ajusta según tus necesidades)
-const tiempoDeEjecucionEnMilisegundos = 15 * 60 * 1000; // 3 minutos
+const tiempoDeEjecucionEnMilisegundos = 3 * 60 * 1000; // 3 minutos
 setTimeout(() => {
   server.close(() => {
     console.log('Servidor cerrado después del tiempo de ejecución especificado.');
