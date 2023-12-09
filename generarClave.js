@@ -81,8 +81,16 @@ authService.post('/calcular-prestamo', verificarToken, (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-authService.listen(PORT, () => {
+const server = authService.listen(PORT, () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);
-});// Función para generar una clave única usando SHA-256
+});
+
+// Configurando un temporizador para cerrar el servidor después de 10 minutos (ajusta según tus necesidades)
+const tiempoDeEjecucionEnMilisegundos = 3 * 60 * 1000; // 3 minutos
+setTimeout(() => {
+  server.close(() => {
+    console.log('Servidor cerrado después del tiempo de ejecución especificado.');
+  });
+}, tiempoDeEjecucionEnMilisegundos);
 
 module.exports = {authService};
