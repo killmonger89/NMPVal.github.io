@@ -15,5 +15,9 @@
     "crypto": "^1.0.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
   }
 }
